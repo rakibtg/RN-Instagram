@@ -52,6 +52,7 @@ const Gallery = () => {
     keyExtractor={(item, index) => index.toString()}
     renderItem={item => <Item data={item} />}
     renderSectionHeader={({ section }) => <Section data={section} />}
+    showsVerticalScrollIndicator={false}
   />
 }
 
