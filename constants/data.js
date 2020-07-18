@@ -1,3 +1,5 @@
+import { randomNumber } from '../helpers'
+
 const data = [{
   "author": {
     "name": "Jayson Hinrichsen",
@@ -162,24 +164,6 @@ const data = [{
   "comments": 51
 }, {
   "author": {
-    "name": "XPS",
-    "handle": "@xps",
-    "avatar": {
-      "small": "https://images.unsplash.com/profile-1593436914961-40416e2f9c5dimage?auto=format&fit=crop&w=50&h=50&q=60&crop=faces&bg=fff",
-      "large": "https://images.unsplash.com/profile-1593436914961-40416e2f9c5dimage?auto=format&fit=crop&w=200&h=200&q=80&crop=faces&bg=fff",
-      "followers": 5,
-      "following": 793
-    }
-  },
-  "photo": {
-    "small": "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=300&q=80",
-    "large": "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-  },
-  "content": "Macbook pro on brown wooden table",
-  "likes": 421,
-  "comments": 62
-}, {
-  "author": {
     "name": "Kate Hliznitsova",
     "handle": "@kate_gliz",
     "avatar": {
@@ -250,24 +234,6 @@ const data = [{
   "content": "Green and white led light signage",
   "likes": 761,
   "comments": 66
-}, {
-  "author": {
-    "name": "Jordon Wells",
-    "handle": "@wellsjordon",
-    "avatar": {
-      "small": "https://images.unsplash.com/profile-1593833963832-9e8d4fbd9251image?auto=format&fit=crop&w=50&h=50&q=60&crop=faces&bg=fff",
-      "large": "https://images.unsplash.com/profile-1593833963832-9e8d4fbd9251image?auto=format&fit=crop&w=200&h=200&q=80&crop=faces&bg=fff",
-      "followers": 480,
-      "following": 90
-    }
-  },
-  "photo": {
-    "small": "https://images.unsplash.com/photo-1594787850760-5b1cf12aa8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=300&q=80",
-    "large": "https://images.unsplash.com/photo-1594787850760-5b1cf12aa8c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-  },
-  "content": "Woman in black tank top and black shorts running on green field during daytime",
-  "likes": 313,
-  "comments": 62
 }, {
   "author": {
     "name": "Mark Rivera",
@@ -394,24 +360,6 @@ const data = [{
   "content": "Brown wicker basket on brown wooden table",
   "likes": 214,
   "comments": 75
-}, {
-  "author": {
-    "name": "XPS",
-    "handle": "@xps",
-    "avatar": {
-      "small": "https://images.unsplash.com/profile-1593436914961-40416e2f9c5dimage?auto=format&fit=crop&w=50&h=50&q=60&crop=faces&bg=fff",
-      "large": "https://images.unsplash.com/profile-1593436914961-40416e2f9c5dimage?auto=format&fit=crop&w=200&h=200&q=80&crop=faces&bg=fff",
-      "followers": 413,
-      "following": 812
-    }
-  },
-  "photo": {
-    "small": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=300&q=80",
-    "large": "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-  },
-  "content": "Silver macbook on brown wooden table",
-  "likes": 667,
-  "comments": 26
 }, {
   "author": {
     "name": "Thái An",
@@ -612,24 +560,6 @@ const data = [{
   "comments": 84
 }, {
   "author": {
-    "name": "XPS",
-    "handle": "@xps",
-    "avatar": {
-      "small": "https://images.unsplash.com/profile-1593436914961-40416e2f9c5dimage?auto=format&fit=crop&w=50&h=50&q=60&crop=faces&bg=fff",
-      "large": "https://images.unsplash.com/profile-1593436914961-40416e2f9c5dimage?auto=format&fit=crop&w=200&h=200&q=80&crop=faces&bg=fff",
-      "followers": 63,
-      "following": 367
-    }
-  },
-  "photo": {
-    "small": "https://images.unsplash.com/photo-1593642702749-b7d2a804fbcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=300&q=80",
-    "large": "https://images.unsplash.com/photo-1593642702749-b7d2a804fbcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-  },
-  "content": "White and blue abstract painting",
-  "likes": 651,
-  "comments": 30
-}, {
-  "author": {
     "name": "Mitchell Luo",
     "handle": "@mitchel3uo",
     "avatar": {
@@ -720,24 +650,6 @@ const data = [{
   "comments": 36
 }, {
   "author": {
-    "name": "Dan Meyers",
-    "handle": "@dmey503",
-    "avatar": {
-      "small": "https://images.unsplash.com/placeholder-avatars/extra-large.jpg?auto=format&fit=crop&w=50&h=50&q=60&crop=faces&bg=fff",
-      "large": "https://images.unsplash.com/placeholder-avatars/extra-large.jpg?auto=format&fit=crop&w=200&h=200&q=80&crop=faces&bg=fff",
-      "followers": 146,
-      "following": 865
-    }
-  },
-  "photo": {
-    "small": "https://images.unsplash.com/photo-1594709588364-d7e7b6003005?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=300&q=80",
-    "large": "https://images.unsplash.com/photo-1594709588364-d7e7b6003005?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-  },
-  "content": "Brown and white abstract painting",
-  "likes": 652,
-  "comments": 14
-}, {
-  "author": {
     "name": "Alexander W",
     "handle": "@jawfox_photography",
     "avatar": {
@@ -772,24 +684,16 @@ const data = [{
   "content": "White and yellow flower painting",
   "likes": 776,
   "comments": 51
-}, {
-  "author": {
-    "name": "Jordon Wells",
-    "handle": "@wellsjordon",
-    "avatar": {
-      "small": "https://images.unsplash.com/profile-1593833963832-9e8d4fbd9251image?auto=format&fit=crop&w=50&h=50&q=60&crop=faces&bg=fff",
-      "large": "https://images.unsplash.com/profile-1593833963832-9e8d4fbd9251image?auto=format&fit=crop&w=200&h=200&q=80&crop=faces&bg=fff",
-      "followers": 558,
-      "following": 970
-    }
-  },
-  "photo": {
-    "small": "https://images.unsplash.com/photo-1594787658806-137162ce9ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=300&q=80",
-    "large": "https://images.unsplash.com/photo-1594787658806-137162ce9ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-  },
-  "content": "Woman in red tank top and white shorts playing basketball during daytime",
-  "likes": 377,
-  "comments": 52
-}]
+}];
 
-export default data.sort(() => Math.random() - 0.5);
+export const recentPosts = () => {
+  return data
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 30);
+}
+
+export const user = () => {
+  const id = randomNumber(0, data.length);
+  const { author } = data[id];
+  return author;
+}
