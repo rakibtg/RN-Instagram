@@ -1,19 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image } from 'react-native';
 
-export default PhotoComponent = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Photo</Text>
-    </View>
-  );
+const PhotoComponent = props => {
+  const {
+    uri = false,
+    radius = 0,
+    width = 0,
+    height = 0,
+    resizeMode = 'cover',
+    margin = 0
+  } = props;
+
+  const imageStyle = {
+    borderRadius: radius,
+    width, 
+    height,
+    resizeMode,
+    margin
+  };
+
+  return <Image style={imageStyle} source={{ uri }} />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default PhotoComponent;
