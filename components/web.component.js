@@ -1,19 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import * as Linking from 'expo-linking';
+import Text from './text.component';
 
-export default WebLinkComponent = () => {
+const WebLinkComponent = () => {
   return (
-    <View style={styles.container}>
-      <Text>WebLink</Text>
-    </View>
+    <TouchableOpacity 
+      onPress={() => Linking.openURL('https://rakibtg.com')}
+    >
+      <Text color="blue" lineHeight={20}>rakibtg.com</Text>
+    </TouchableOpacity>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default WebLinkComponent;
