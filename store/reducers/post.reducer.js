@@ -5,6 +5,16 @@ export default (state = null, action) => {
         ...state,
         posts: action.payload
       }
+    case 'SET_ACTIVE_POST':
+      return {
+        ...state,
+        activePost: action.payload
+      }
+    case 'RESET_ACTIVE_POST':
+      return {
+        ...state,
+        activePost: action.payload
+      }
     default:
       return state
   }

@@ -5,10 +5,10 @@ export default (state = null, action) => {
         ...state,
         user: action.payload
       }
-    case 'SET_GALLERY_HEIGHT':
+    case 'SET_ACTIVE_SCREEN':
       return {
         ...state,
-        galleryHeight: action.payload
+        activeScreen: action.payload
       }
     default:
       return state
