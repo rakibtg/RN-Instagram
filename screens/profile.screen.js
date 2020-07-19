@@ -23,7 +23,6 @@ const ProfileScreen = ({ navigation }) => {
     <SectionList 
       bounces={false}
       sections={sections}
-      removeClippedSubviews={true}
       stickySectionHeadersEnabled={true}
       keyExtractor={(item, index) => index.toString()}
       renderItem={item => <PhotoRow data={item} />}
