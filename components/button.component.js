@@ -19,7 +19,8 @@ const ButtonComponent = props => {
     borderRadius = null,
     borderColor = null,
     bold = false,
-    background = 'transparent'
+    background = 'transparent',
+    style = []
   } = props;
 
   const buttonStyle = [
@@ -28,7 +29,8 @@ const ButtonComponent = props => {
       borderColor,
       width, height,
       borderRadius,
-      backgroundColor: Colors[background]
+      backgroundColor: Colors[background],
+      ...style
     }
   ];
 
