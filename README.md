@@ -1,1 +1,1 @@
-![Imgur Image](https://im4.ezgif.com/tmp/ezgif-4-03ee26a32d92.gif)
+![App Demo](https://im4.ezgif.com/tmp/ezgif-4-4f739626f8e3.gif)
