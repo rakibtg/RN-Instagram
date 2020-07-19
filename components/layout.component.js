@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
-import { setGalleryHeight } from '../store/actions/app.action';
-import { useDispatch } from 'react-redux';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import Colors from '../constants/colors';
 
 const LayoutComponent = props => {
   const {
@@ -10,10 +9,9 @@ const LayoutComponent = props => {
     style = [],
     children,
     fill = true,
-    scroll = true
+    scroll = true,
+    renderView = false
   } = props;
-
-  const dispatch = useDispatch();
 
   let contentStyle = [];
   if (typeof style === 'object' && style.length) contentStyle = style;
@@ -22,36 +20,38 @@ const LayoutComponent = props => {
   // Cover the entire viewport of the screen.
   fill && contentStyle.push({ flexGrow: 1 });
 
+  renderView && contentStyle.push(styles.container);
+
   React.useEffect(() => {
     if (navigation) {
       navigation.setOptions({ title });
     }
   }, [navigation]);
 
-  return (
-    <ScrollView 
+  if (renderView) {
+    return <View
+      style={contentStyle}>
+      {children}
+    </View>
+  } else {
+    return <ScrollView 
       style={styles.container}
       contentContainerStyle={contentStyle}
       showsVerticalScrollIndicator={false}
       scrollEnabled={scroll}
       keyboardShouldPersistTaps='handled'
       scrollEventThrottle={50}
-      bounces={false}
-      // onScroll={e => {
-      //   console.log(e.nativeEvent.contentOffset.y)
-      // }}
-      onLayout={e => {
-        dispatch(setGalleryHeight(e.nativeEvent.layout.height))
-      }}>
+      bounces={false}>
       {children}
     </ScrollView>
-  );
+  }
+
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: Colors.white
   },
 });
 
