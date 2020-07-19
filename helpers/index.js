@@ -10,3 +10,11 @@ export const profileDataChunk = (arr, len) => {
   }
   return chunks;
 }
+
+export const translateToProfileSections = (posts = []) => {
+  const sectionData = [
+    { title: 'PROFILE_CARD', data: [] },
+    { title: 'PHOTO_NAVIGATION', data: profileDataChunk(posts, 3) }
+  ];
+  return sectionData
+}
